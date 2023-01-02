@@ -1,24 +1,21 @@
 #---------------Construction app st-----------------------------------------
 import streamlit as st  
-import plotly.express as px  
-#Importer pleins de cryptos
-#Choisir quels cryptos on veut investir + montant
-#Choisir la date début (simultanée pour tt le monde)
-#Fonction valeurs selon les inputs
+import plotly.express as px 
+from datetime import datetime, timedelta
+import pandas as pd
 
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
+#Importer plusieurs cryptos à partir de l'API yahoo finance
+#Choisir quels cryptos on veut investir + le montant
+#Choisir les dates de début et de fin (simultanée pour tout les indices)
+
+# création de la page
 st.set_page_config(page_title="Comparatif portfolio/ETF 2022 ", 
                    page_icon=":bar_chart:", 
                    layout="wide")
-from datetime import datetime, timedelta
 
 # ---- MAINPAGE ----
 st.title(":bar_chart: Comparatif portfolio/ETF")
 st.markdown("##")
-
-
-
-
 
 test_date=datetime.now()
 diff = 1
@@ -29,7 +26,7 @@ elif test_date.weekday() == 6:
 else :
     diff = 1
 res = test_date - timedelta(days=diff)
-#date_fin=str(res)[:10]
+
 date_f=st.date_input("Entrer la date de fin voulue",res)
 date_fin=str(date_f)[:10]
 
@@ -104,12 +101,6 @@ def mise_a_niveau(liste, num):
         else:
             k += 1
     return (liste)
-
-#groupement des difféents dataset en gardant des entiers
-import pandas as pd
-
-#Mettre la valeur de départ en atttribut aussi. Fonction conversion avec
-
 
 for k in range(len(ETF)):
     #Mise à  niveau des dates d'ETF
