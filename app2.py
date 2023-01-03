@@ -26,7 +26,8 @@ elif test_date.weekday() == 6:
 else :
     diff = 1
 res = test_date - timedelta(days=diff)
-
+date_debut=st.date_input("Entrer la date de début voulue",datetime(2022,1,1))
+d=str(date_debut)[:10]
 date_f=st.date_input("Entrer la date de fin voulue",res)
 date_fin=str(date_f)[:10]
 
@@ -67,8 +68,7 @@ DOG=yf.Ticker(DOG)
 
 CRYPTOS=[LINK,ETH,AVAX,TH,BNB,XRP,ADA,PLG,DOG,BTC]
 #récupéation prix sur un pas journalier sur la péiode voulue
-date_debut=st.date_input("Entrer la date de début voulue",datetime(2022,1,1))
-d=str(date_debut)[:10]
+
 for i in range(len(ETF)):
     ETF[i]=ETF[i].history(period='1d',
                       start=d,
