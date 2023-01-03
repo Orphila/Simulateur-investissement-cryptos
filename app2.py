@@ -20,7 +20,7 @@ st.markdown("##")
 
 date_debut=st.date_input("Entrer la date de début voulue",datetime(2022,1,1))
 d=str(date_debut)[:10]
-date_f=st.date_input("Entrer la date de fin voulue",datetime(2023,1,1))
+date_f=st.date_input("Entrer la date de fin voulue",datetime(2022,12,31))
 date_fin=str(date_f)[:10]
 
 #--------------------------création du dataset avec yahoo finance--------------
