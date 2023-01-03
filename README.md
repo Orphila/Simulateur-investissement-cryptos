@@ -1,5 +1,5 @@
 # Simulateur investissement cryptomonaies
-# Portfolio
+
 Il s'agit de la seconde version du simulateur de rendements boursiers. Cette webapp compare l'évolutions d'un portfolio 
 composé de plusieurs cryptomonaies choisies au préalable. Cette fois on peut modifier les sommes voulues depuis l'application.
 Le but est d'évaluer la performance qu'aurait eu ce portfolio depuis une date voulue (à partir de 2021), et de comparer celles-ci avec les rendements
