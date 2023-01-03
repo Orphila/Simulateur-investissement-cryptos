@@ -17,18 +17,10 @@ st.set_page_config(page_title="Comparatif portfolio/ETF 2022 ",
 st.title(":bar_chart: Comparatif portfolio/ETF")
 st.markdown("##")
 
-test_date=datetime.now()
-diff = 1
-if test_date.weekday() == 0:
-    diff = 3
-elif test_date.weekday() == 6:
-    diff = 2
-else :
-    diff = 1
-res = test_date - timedelta(days=diff)
+
 date_debut=st.date_input("Entrer la date de début voulue",datetime(2022,1,1))
 d=str(date_debut)[:10]
-date_f=st.date_input("Entrer la date de fin voulue",res)
+date_f=st.date_input("Entrer la date de fin voulue",datetime(2023,1,1))
 date_fin=str(date_f)[:10]
 
 #--------------------------création du dataset avec yahoo finance--------------
